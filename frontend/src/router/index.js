@@ -1,0 +1,42 @@
+import {createMemoryHistory, createRouter} from 'vue-router'
+// import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Git from '../views/Git.vue'
+import Postscript from '../views/Postscript.vue'
+
+const routes = [
+    {
+        path: '/',
+        redirect: '/about'
+    },
+    // {
+    //   path: '/',
+    //   name: 'Home',
+    //   component: Home
+    // },
+    {
+        path: '/about',
+        name: 'About',
+        // You can only use pre-loading to add routes, not the on-demand loading method.
+        component: About
+    },
+    {
+        path: '/git',
+        name: 'Git',
+        // You can only use pre-loading to add routes, not the on-demand loading method.
+        component: Git
+    },
+    {
+        path: '/postscript',
+        name: 'Postscript',
+        // You can only use pre-loading to add routes, not the on-demand loading method.
+        component: Postscript
+    }
+]
+
+const router = createRouter({
+    history: createMemoryHistory(),
+    routes
+})
+
+export default router
